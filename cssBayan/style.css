@@ -125,3 +125,22 @@ input {
     align-self: flex-end;
     position: absolute;
 }
+
+@media (min-width: 820px) {
+    body {
+        font-size: 1.5625rem;
+    }
+
+    img {
+        width: 21.875rem;
+    }
+
+    .meme__wrapper {
+        padding: 0.9375rem;
+        width: 31.25rem;
+    }
+
+    .bayan__item {
+        padding-bottom: 0.4375rem;
+    }   
+}
