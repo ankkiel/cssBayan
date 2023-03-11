@@ -77,6 +77,19 @@ input {
     align-self: center;
 }
 
+.meme__wrapper:active .meme__image {
+    opacity: 0.4;
+}
+
+.meme__wrapper:active input:focus ~ .meme__title {
+    opacity: 0.3;
+    color: var(--primary-text-color);
+}
+
+.meme__wrapper:active input:focus ~ .meme__icon {
+    opacity: 0.3;
+}
+
 .meme__wrapper input:checked ~ .meme__image {
     height: 100%;
     transition: height 1s;
@@ -125,12 +138,28 @@ input {
     background-image: url('assets/open-icon.svg');
 }
 
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
 .bayan__list:hover ~ .meme__icon {
     background-image: url('assets/close-icon.svg');
+    animation-name: opacity;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    
 }
 
 .meme__wrapper input:hover ~ .meme__icon {
     background-image: url('assets/close-icon.svg');
+    animation-name: opacity;
+    animation-duration: 3s;
+    animation-fill-mode: both;
 }
 
 .meme__icon {
